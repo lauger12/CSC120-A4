@@ -21,12 +21,10 @@ public class Engine {
     }
 
     /**
-     * Compares balance to a proposed debit to ensure sufficient funds
-     * 
-     * @param currentFuel current fuel
+     * Reduces currentFuel by 1 for every loop, and if currentFuel > 0, notEmpty = true, otherwise this method returns false
      * @return notEmpty bool T/F: is fuel > 0?
      */
-    public boolean go() {
+    private boolean go() {
         notEmpty = true;
         if (notEmpty) {
             this.currentFuel -= 1;
