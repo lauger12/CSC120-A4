@@ -35,10 +35,3 @@ public class Passenger {
     }
 }
 
-
-// boardCar(Car c)` can call `c.addPassenger(this)` to board a given `Car`
-// (_Hint: this method should check the value that gets `return`ed by
-// `c.addPassenger(...)` in case the selected car is full._)
-// - `getOffCar(Car c)` can call `c.removePassenger(this)` to get off a given
-// `Car` (_Hint: this method should check the value that gets `return`ed by
-// `c.removePassenger(...)` in case the `Passenger` wasn't actually onboard._)

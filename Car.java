@@ -4,12 +4,13 @@ public class Car {
     int maxCapacity;
     ArrayList<Passenger> passengersOnboard;
 
+
     /**
      * this is a constructor for Car objects
      */
-    public Car(int carMaxCapacity) {
-        this.maxCapacity = carMaxCapacity;
-        this.passengersOnboard = new ArrayList<Passenger>(carMaxCapacity);
+    public Car(int naxCapacity) {
+        this.maxCapacity = naxCapacity;
+        this.passengersOnboard = new ArrayList<Passenger>(maxCapacity);
     }
 
     public boolean addPassenger(Passenger p) {
@@ -39,7 +40,22 @@ public class Car {
         return true;
     }
 
-    public static void main(String[] args) {
-        Car c = new Car(10);
+    public int passengerListSize() {
+        return passengersOnboard.size();
+    }
+
+    public Passenger printCarManifest(int i) {
+        if (passengerListSize() > 0) {
+            for (i = 0; i < passengerListSize(); i++) {
+                // System.out.println(passengersOnboard.get(i)); // get and print the current
+                // passenger matching the loop int "i" that we are on
+                System.out.println(passengersOnboard.get(i)); 
+            }
+        }
+        return passengersOnboard.get(i);
+    }
+
+    public int carSeatsRemaining(){
+        return this.maxCapacity - passengersOnboard.size();  
     }
 }
