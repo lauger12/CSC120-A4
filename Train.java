@@ -7,67 +7,60 @@ public class Train {
     private int passengerCapacity;
     private int nCars;
 
-
     public Train(FuelType fuelType, double fuelCapacity, int nCars, int passengerCapacity) {
     }
 
-    //accessors
+    // accessors
 
-    public Engine getEngine(){
+    /**
+     * Getter for engine
+     * 
+     * @return the train's engine
+     */
+    public Engine getEngine() {
         return this.myEngine;
     }
 
-    public Car getCar(int i){
+    /**
+     * Getter for "ith" car
+     * 
+     * @return the passenger's name
+     */
+    public Car getCar(int i) {
         return this.trainCars.get(i);
     }
 
-    public int getMaxCapacity(){
+    /**
+     * Getter for max capacity
+     * 
+     * @return the passenger capacity of the train
+     */
+    public int getMaxCapacity() {
         return this.passengerCapacity;
     }
 
-    // public int seatsRemaining(){
-    //     // do we call a method from cars, going through each car and returning seats remaining and summing them?
-    //     return
+    // public int seatsRemaining(){ // this does not work, not fully implemented
+    // // do we call a method from cars, going through each car and returning seats
+    // remaining and summing them?
+    // return 1;
     // }
 
-    public ArrayList<Passenger> printManifest(){ // need to call printmanifest from Car, but how for each car?
-        for (int i = 0; i < nCars; i++) {
-            // Passenger trainCars(i).printCarManifest;
-        }
-        return null; // placeholder to prevent errors until I figure out how to do this 
+    public ArrayList<Passenger> printManifest() { // need to call printmanifest from Car, but how for each car?
+        // for (int i = 0; i < nCars; i++) {
+        // // Passenger trainCars(i).printCarManifest;
+        // }
+        return null; // placeholder to prevent errors until I figure out how to do this part,
     }
 
-    
+    // Notes for what we need:
+    // -accesors:
+    // - `public Engine getEngine()`
+    // - `public Car getCar(int i)` to return the `i`th car
+    // - `public int getMaxCapacity()` which will return the maximum total capacity
+    // across all `Car`s
+    // - `public int seatsRemaining()` which will return the number of remaining
+    // open seats across all `Car`s
+    // - and finally, its own `printManifest()` that prints a roster of all
+    // `Passenger`s onboard (_Hint: ask your `Car`s to help!_)z
 
-
-    // - a few accessors:
-// - `public Engine getEngine()`
-// - `public Car getCar(int i)` to return the `i`th car
-// - `public int getMaxCapacity()` which will return the maximum total capacity
-// across all `Car`s
-// - `public int seatsRemaining()` which will return the number of remaining
-// open seats across all `Car`s
-// - and finally, its own `printManifest()` that prints a roster of all
-// `Passenger`s onboard (_Hint: ask your `Car`s to help!_)z
- 
 }
-
-
-
-// Now we're in the home stretch! To assemble your `Train`, you'll need (at
-// minimum):
-
-// - an `Engine`
-// - an `ArrayList` to keep track of the `Car`s currently attached
-// - a constructor `Train(FuelType fuelType, double fuelCapacity, int nCars, int
-// passengerCapacity)` which will initialize the `Engine` and `Car`s and store
-// them
-// - a few accessors:
-// - `public Engine getEngine()`
-// - `public Car getCar(int i)` to return the `i`th car
-// - `public int getMaxCapacity()` which will return the maximum total capacity
-// across all `Car`s
-// - `public int seatsRemaining()` which will return the number of remaining
-// open seats across all `Car`s
-// - and finally, its own `printManifest()` that prints a roster of all
-// `Passenger`s onboard (_Hint: ask your `Car`s to help!_)

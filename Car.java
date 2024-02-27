@@ -4,7 +4,6 @@ public class Car {
     int maxCapacity;
     ArrayList<Passenger> passengersOnboard;
 
-
     /**
      * this is a constructor for Car objects
      */
@@ -13,6 +12,13 @@ public class Car {
         this.passengersOnboard = new ArrayList<Passenger>(maxCapacity);
     }
 
+    /**
+     * Reduces currentFuel by 1 for every loop, and if currentFuel > 0, notEmpty =
+     * true, otherwise this method returns false
+     * 
+     * @param Passenger
+     * @return T/F if the passenger is able to be added the car or not
+     */
     public boolean addPassenger(Passenger p) {
         // check if there's room
         if (this.passengersOnboard.size() >= this.maxCapacity) {
@@ -29,6 +35,13 @@ public class Car {
         return true;
     }
 
+    /**
+     * Reduces currentFuel by 1 for every loop, and if currentFuel > 0, notEmpty =
+     * true, otherwise this method returns false
+     * 
+     * @param Passenger
+     * @return boolean T/F if the passenger is able to be added the car or not
+     */
     public boolean removePassenger(Passenger p) {
         // check if onboard
         if (!this.passengersOnboard.contains(p)) {
@@ -40,22 +53,34 @@ public class Car {
         return true;
     }
 
+    /**
+     * Getter for the size of the passenger list of a car
+     * 
+     * @return the size of the car's passenger list
+     */
     public int passengerListSize() {
         return passengersOnboard.size();
     }
 
-    public Passenger printCarManifest(int i) {
+    /**
+     * Reduces currentFuel by 1 for every loop, and if currentFuel > 0, notEmpty =
+     * true, otherwise this method returns false
+     * 
+     * @param int i for the 'for' loop to go through the list
+     * @return the car's passenger manifest
+     */
+    public ArrayList<Passenger> printCarManifest(int i) { // figure out returning vs printing here! ****
         if (passengerListSize() > 0) {
             for (i = 0; i < passengerListSize(); i++) {
                 // System.out.println(passengersOnboard.get(i)); // get and print the current
                 // passenger matching the loop int "i" that we are on
-                System.out.println(passengersOnboard.get(i)); 
+                System.out.println(passengersOnboard.get(i));
             }
         }
-        return passengersOnboard.get(i);
+        return passengersOnboard;
     }
 
-    public int carSeatsRemaining(){
-        return this.maxCapacity - passengersOnboard.size();  
+    public int carSeatsRemaining() {
+        return this.maxCapacity - passengersOnboard.size();
     }
 }

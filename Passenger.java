@@ -24,7 +24,6 @@ public class Passenger {
         return true;
     }
 
-
     public boolean exitCar(Car c) {
         if (!c.removePassenger(this)) {
             System.out.println("Could not exit car");
@@ -34,4 +33,3 @@ public class Passenger {
         return true;
     }
 }
-
